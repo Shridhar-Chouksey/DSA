@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
 public class Main {
 
     public static void main(String[] args) {
-
+  //CC Sept
         FastReader fastReader=new FastReader();
         long z=fastReader.nextLong();
 
