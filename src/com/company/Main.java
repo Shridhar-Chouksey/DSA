@@ -21,7 +21,8 @@ public class Main {
         FastReader fastReader=new FastReader();
         long z=fastReader.nextLong();
 
-        while(z-->0) {
+        while(z-->0)
+        {
              long N= fastReader.nextLong();
              long S= fastReader.nextLong();
 
