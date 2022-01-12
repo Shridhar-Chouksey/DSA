@@ -1,24 +1,32 @@
 package com.company;
-//Binary to Decimal Converter
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-    public static int BinaryToDecimal(int binary){
-        int decimal = 0;
-        int n = 0;
-        while(true){
-            if(binary == 0){
-                break;
-            } else {
-                int temp = binary%10;
-                decimal += temp*Math.pow(2, n);
-                binary = binary/10;
-                n++;
-            }
-        }
-        return decimal;
-    }
+
     public static void main(String[] args) {
-        System.out.println("Decimal of 1010 is: "+BinaryToDecimal(1010));
-        System.out.println("Decimal of 10101 is: "+BinaryToDecimal(10101));
-        System.out.println("Decimal of 11111 is: "+BinaryToDecimal(11111));
+
+        List<Employee> employeeList=new ArrayList<>();
+        employeeList.add(new Employee("Shridhar","Chouksey",32));
+        employeeList.add(new Employee("Shriji","Singh",64));
+        employeeList.add(new Employee("Suresh","Chouksey",102));
+        employeeList.add(new Employee("Rony","Sharma",46));
+
+//           employeeList.forEach(System.out::println);
+//           System.out.println(employeeList.get(1));
+//
+//          System.out.println(employeeList.isEmpty());
+//
+        employeeList.set(1,new Employee("shrizee","chouksey",45));
+       // employeeList.forEach(System.out::println);
+
+        Employee[] employeeArray=employeeList.toArray(new Employee[employeeList.size()]);
+
+        for(Employee employee:employeeArray){
+            System.out.println(employee);
+
+        }
+        System.out.println(employeeList.contains(new Employee("Shridhar","Chouksey",32)));
     }
 }
